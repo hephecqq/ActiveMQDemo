@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="dagong.mybatis">
+	<sql id="getListSql">
+		select id,name,visitorId,status,createTime from website
+		where status > 0
+	</sql>
+	<insert id="add" paramterType="Website" useGeneratedKeys="true"
+		keyProperty="Id">
+		insert into website(name,visitorId,status,createTime)
+		values(#{name},#{visitorId},#{status},#{createTime})
+	</insert>
+	<delete id="delete" parameterType="int">
+		delete from website where
+		status > 0 and id = #{id}
+	</delete>
+	<select id="query" paramterType="int" resultMap="websiteRs">
+		select website.id siteId,
+		Website.name siteName,
+		Visitor.Id visitorId,
+		Visitor.name visitorName
+		Website.createTime siteCreateTime
+		inner join Visitor on website.visitor)d
+		=Visitor.id where website.status>0
+		and website.id=#{id}>
+	</select>
+	<resutlMap type="Website" id="websiteRs">
+		<id column="siteId" property="id" />
+		<result column="siteName" property="name" />
+		<association property="visitor" javaType="Visitor"
+			resultMap="visitorRs">
+		</association>
+	</resutlMap>
+
+
+</mapper>

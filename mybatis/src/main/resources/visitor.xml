@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="dagong.mybatis">
+<!-- 此处的resultType就是对应刚刚你在typeAlias节点里面规定的别名 -->
+    <select id="basicQuery" parameterType="int" resultType="Visitor">
+        select * from visitor where id=#{id} and Status>0 order by Id
+    </select>
+</mapper>
