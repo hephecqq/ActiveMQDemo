@@ -165,6 +165,26 @@
 			<artifactId>jedis</artifactId>
 			<version>2.9.0</version>
 		</dependency>
+		<!-- zxing依赖 -->
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>3.3.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/javase -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>javase</artifactId>
+			<version>3.3.0</version>
+		</dependency>
+		<!-- QRCode依赖 -->
+		<!-- https://mvnrepository.com/artifact/com.github.sogyf/goja-qrcode -->
+		<dependency>
+			<groupId>com.github.sogyf</groupId>
+			<artifactId>goja-qrcode</artifactId>
+			<version>0.1.7</version>
+		</dependency>
 
 	</dependencies>
 	<build>
